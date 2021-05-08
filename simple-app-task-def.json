@@ -1,5 +1,5 @@
 {
-    "family": "console-sample-app",
+    "family": "$ContainerName",
     "volumes": [
         {
             "name": "my-vol",
@@ -9,7 +9,7 @@
     "containerDefinitions": [
         {
             "environment": [],
-            "name": "simple-app",
+            "name": "$ContainerName",
             "image": "amazon/amazon-ecs-sample",
             "cpu": 10,
             "memory": 500,
@@ -39,7 +39,7 @@
             "memory": 500,
             "volumesFrom": [
             {
-              "sourceContainer": "simple-app"
+              "sourceContainer": "$ContainerName"
             }
             ],
             "entryPoint": [
